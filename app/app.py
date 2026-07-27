@@ -1,3 +1,4 @@
+from pathlib import Path
 import streamlit as st
 import numpy as np
 import joblib
@@ -17,9 +18,11 @@ st.set_page_config(
 # ----------------------------------------------------------------------------
 # Load model & schema
 # ----------------------------------------------------------------------------
-model = joblib.load("insurance_model.joblib")
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-with open("columns.json", "r") as f:
+model = joblib.load(BASE_DIR / "model" / "insurance_model.joblib")
+
+with open(BASE_DIR / "columns.json", "r") as f:
     columns = json.load(f)
 
 # ----------------------------------------------------------------------------
