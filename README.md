@@ -165,6 +165,11 @@ streamlit run app.py
 
 ---
 
+## 🌐 Live Application
+👉 https://medical-insurance-cost-prediction-ft6stcnpeldxytbybyufdj.streamlit.app/
+
+---
+
 ## 📊 Sample Output
 
 * Estimated Insurance Cost
